@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SalesController;
 
 
 /*
@@ -27,6 +28,8 @@ Route::prefix('category')->group(function () {
     Route::get('/baby-kid', [ProductController::class, 'babyKid']);
 });
 
+// Sales Page
+Route::get('/sales', [SalesController::class, 'index']);
 // Route::get('/', function () {
 //     return view('welcome');
 // });
